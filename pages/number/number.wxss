@@ -1,0 +1,71 @@
+/* pages/number/number.wxss */
+page{
+  height: 100%;
+}
+.class-number{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+}
+.over-btn{
+  width:160rpx;
+  height: 50rpx;
+  background:#fb5851;
+  color:white;
+  font-size:24rpx;
+  border-radius: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+  
+}
+.duc3{
+display: flex;
+width:100%;
+ margin-top:50rpx;
+}
+.col-1{
+  color:#d5d5d5;
+}
+.duc3 image{
+  width:37rpx;
+  height:37rpx;
+  border-radius: 50%;
+ 
+}
+.number-box{
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 40rpx;
+
+}
+.number-cell{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 20rpx;
+  font-size: 50rpx;
+}
+
+.fin-number{
+  width:100%;
+  font-size:32rpx;
+  display: flex;
+  padding-bottom: 10rpx;
+  align-items: center;
+}
+
+.fin-num{
+  width:15%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#fb5851;
+  font-size:50rpx;
+}

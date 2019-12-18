@@ -1,0 +1,67 @@
+<!--pages/text/index.wxml-->
+<view class="main_box">
+  <view class="main_head_box">
+
+    <image class="main_box_img" src="../../images/swiper.jpg" mode="aspectFill"></image>
+
+  </view>
+
+  <view class='card' style="margin-bottom:40rpx;margin-top:0;">
+    <view class="title">选课入口</view>
+    <view class="navigator_box">
+      <navigator class='choose-card choose-card-left' url='../course/course' style='opacity:{{opacity}}'>
+        <view class='choose-card-text'>选修课·民大</view>
+        <view class='choose-card-mintext'>optional course</view>
+      </navigator>
+      <navigator class='choose-card choose-card-left' url='../course1/course1'> 
+        <view class='choose-card-text'>必修课·民大</view>
+        <view class='choose-card-mintext'>required course</view>
+      </navigator>
+    </view>
+  </view>
+  <view style='color:#5d5d5d;padding-left:20rpx'>已选课程</view>
+  <view class='card'>
+
+    <block wx:for="{{yxkc}}" wx:key="">
+      <template is="course" data='{{item}}'></template>
+    </block>
+  </view>
+
+
+</view>
+
+
+<!-- 课程模板 -->
+<template name="course">
+  <view class="card_box">
+    <view style='display:flex;flex-direction:column;width:100%'>
+      <view class='class'>
+        <view class='class-title'>
+          <view style="min-width:150rpx">课程名称：</view>
+          <view class="courseName">{{item.courseName}}
+          <text style='margin-left:20rpx;'>{{item.aliasName}}</text>
+          </view>
+        </view>
+        <view class='class-title'>
+          <view>授课单位：</view>
+          <view class="courseName">{{item.collegeBelongName}}</view>
+        </view>
+        <view class='class-block'>
+          <view class='class-block-block'>
+            <view style="width:140rpx;">学分：</view>
+            <view class="courseName">{{item.score}}</view>
+          </view>
+          <view class='class-block-block'>
+            <view style="min-width:90rpx;">课程安排：</view>
+            <view style="width:340rpx;margin-left:80rpx;color:#878b8a">{{item.courseArrange}}</view>
+             <view style="display: {{item.isDelete == 0 ? 'none':'block'}}"   bindtap='select_class' data-tcId='{{item.tcId}}' class="delect_btn">
+              <image src="../../images/clear1.png"></image>
+             </view>
+          </view>
+        </view>
+      </view>
+    </view>
+   
+  </view>
+
+</template>

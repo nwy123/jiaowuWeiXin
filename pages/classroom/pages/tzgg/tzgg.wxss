@@ -1,0 +1,13 @@
+/* pages/classroom/pages/通知通告/通知通告.wxss */
+/* pages/classroom/pages/classitemB/classitemB.wxss */
+@import "../classitem/classitem.wxss";
+.img_box{
+  width: 100%;
+  height:410rpx;
+  display: flex;
+
+}
+.img_box image{
+  width: 100%;
+  height: 100%;
+}

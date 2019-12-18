@@ -1,0 +1,192 @@
+/**app.wxss**/
+@import "../../../classroom/pages/main/main.wxss";
+
+.rk_box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:#fff;
+  margin-top: 50rpx;
+  border-radius: 10rpx;
+}
+.rk_name{
+  width:100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2rpx #efefef;
+  position:relative;
+  
+}
+.xkrk{
+  position:relative;
+}
+.xkrk::before{
+  content: '';
+  position:absolute;
+  left: -60rpx;
+  top: 20rpx;
+  width: 30rpx;
+  height:5rpx;
+  background:#d8d8d8;
+  
+}
+.xkrk::after{
+  content: '';
+  position:absolute;
+  left: 150rpx;
+  top: 25rpx;
+  width: 30rpx;
+  height:4rpx;
+  background:#d8d8d8;
+  
+}
+
+.rk_item_box{
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+.rk_item{
+  width:45%;
+  height:205rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.rk_item image{
+  width:100%;
+  height: 100%
+}
+.slide-imag{
+  width: 100%;
+}
+image{
+  width: 100%;
+}
+.card_box{
+  display: flex;
+  
+}
+.card_box image{
+  width: 50rpx;
+  height:50rpx;
+}
+.notice{
+  font-size: 28rpx;
+  padding: 16rpx;
+  background: #fafafa;
+  color: #999;
+}
+.card{
+  margin-top: 10rpx;
+  padding-bottom: 20rpx;
+}
+.navigator_box{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.title{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom:20rpx;
+  font-size: 32rpx;
+  color:#5d5d5d
+  
+}
+.class{
+  /* width: 95%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+  padding: 20rpx 20rpx;
+  position: relative;
+  border: 1rpx solid #fafafa;
+  box-shadow: 0 0 48rpx 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+  background-color: #FFFFFF;
+  
+}
+.courseName{
+  margin-left: 80rpx;
+  color:#878b8a;
+}
+.class-title{
+  font-size: 30rpx;
+  padding:20rpx;
+  padding-left: 0;
+  /* color:#7ca7c7; */
+  display: flex;
+}
+.class-block{
+  display: block;
+  font-size: 28rpx;
+  padding:5rpx;
+  
+}
+.class-block-block{
+  display: flex;
+  margin-top: 20rpx;
+  /* color: #999999; */
+}
+.choose-card{
+  width: 48%;
+  height: 200rpx;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.choose-card-left{
+  /* background:#666699; */
+  /* background:linear-gradient(150deg, #0099CC 30%, #6699CC 70%); */
+  background:linear-gradient(to right, rgb(127, 127, 213), rgb(134, 168, 231));
+  
+}
+.choose-card-right{
+  background: linear-gradient(to right,#6699CC 70%, #0099CC 30%);
+  
+}
+.choose-card-text{
+  text-align: center;
+  font-size: 38rpx;
+  color: #fff;
+  padding: 30rpx 0;
+}
+.choose-card-mintext{
+  text-align: center;
+  font-size: 20rpx;
+  color: #fff;
+  padding: 10rpx;
+}
+/* 必修课 */
+.course-title{
+      padding: 28rpx 30rpx 20rpx;
+    color: #999999;
+    font-size: 26rpx;
+    position: relative;
+}
+.class-block-block image{
+  /* width: 28rpx;
+  height: 28rpx; */
+  vertical-align: middle;
+}
+.class_btn{
+  font-size: 28rpx;
+  padding: 10rpx 16rpx;
+  background: #ccc;
+  display: inline-block;
+  position: absolute;
+  top: 40rpx;
+  right: 20rpx;
+}

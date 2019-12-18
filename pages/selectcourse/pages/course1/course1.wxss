@@ -1,0 +1,43 @@
+@import "../course/course.wxss";
+/* .content{
+  margin-top: 50rpx;
+} */
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-time{
+  margin-top: 10rpx;
+}
+.type-item{
+  align-items: center;
+  border-bottom:none;
+}
+.type-item-a{
+  line-height: 40rpx;
+  display: flex;
+  flex-direction: column;
+  padding:10rpx;
+}
+.course-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course-type-block{
+  background:#fff;
+  width:95%;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.course-name{
+  font-size:32rpx;
+  
+}
+.type-item{
+  height: auto;
+}

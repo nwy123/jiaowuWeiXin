@@ -1,0 +1,28 @@
+<!--pages/record/record.wxml-->
+<view  wx:if="{{flag}}">
+    <view class="show_on">
+      <image src='../../image/11.png' mode='aspectFill'class="show_on_image"></image>
+      <view class="show_on_text">暂无考勤记录</view>
+    </view>
+  
+  </view>
+<view class="record-area">
+  
+
+	<view wx:for="{{times}}" wx:key="{{item.id}}">
+		<navigator class="record-cell" url='../manual/manual?timeId={{item.id}}&operation=old&tcId={{tcId}}'>
+			<view class="record-icon">
+			<image src="../../image/record.png"></image>
+			</view>
+			<view class="record-text" >
+				<text class="text-sty">{{item.time}}</text>
+			</view>
+      <view class="xiangqing_btn">
+        <image src='../../image/icro.png' mode="aspectFill" style="width:40rpx;height:40rpx"></image>
+      </view>
+		</navigator>
+	</view>
+</view>
+
+
+

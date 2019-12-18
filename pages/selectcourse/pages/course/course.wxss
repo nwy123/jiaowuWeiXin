@@ -1,0 +1,258 @@
+/* pages/course/course.wxss */
+.course{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	display:flex;
+	overflow:scroll;
+	color:#3a3a3a;
+  -webkit-overflow-scrolling: touch;
+}
+.nav{
+	width:180rpx;
+	background:#f3f3f3;
+	height:100%;
+
+}
+.container-linkpage .nav .nav-scroll {
+	overflow:scroll;
+}
+.nav-item{
+	display:block;
+	color:#313131;
+	padding:32rpx 0;
+	font-size:28rpx;
+  line-height: 50rpx;
+}
+.nav-item-text{
+  padding: 0 16rpx;
+  text-align: left;
+  display: block;
+}
+.content{
+	flex:1;
+	background:#fafafa;
+	height:95%;
+}
+.name{
+  color:#797979;
+  font-size: 30rpx;
+}
+.type-name {
+
+	display:flex;
+  padding-left: 20rpx;
+	/* justify-content:center; */
+	height:72rpx;
+	align-items:center;
+}
+.line {
+	width:10rpx;
+	height:10rpx;
+  border-radius: 50%;
+  background:#2B95EF;
+	/* border-bottom:solid 1rpx #ddd; */
+
+}
+.name {
+    margin:0 16rpx;
+
+}
+.type-item{
+  padding:24rpx 24rpx;
+  margin-left:24rpx;
+  padding-right:24rpx;
+  display:flex;
+   align-items:flex-end;
+  position:relative;
+  color:#333333;
+  border-bottom:solid 1rpx #ebebeb;
+
+}
+.course-name{
+  overflow:hidden;
+  text-align:left;
+  word-break:break-all;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  font-size:28rpx;
+
+}
+.course-massage{
+  font-size:24rpx;
+  color:#999;
+  margin-top:8rpx;
+  display:inline;
+  margin-right:5px;
+}
+.course-time{
+  overflow:hidden;
+  text-align:left;
+  word-break:break-all;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  font-size:24rpx;
+  color:#999;
+}
+.type-item-a{
+  flex: 1;
+  position: relative;
+}
+.course-people{
+  color:#2B95EF;
+  margin-top:16rpx;
+  font-size:28rpx;
+
+}
+.course-add{
+  width: 50rpx;
+  height: 50rpx;
+  background: #2B95EF;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.course-add image{
+  width: 80%;
+  height: 80%;
+ 
+}
+.course-basket{
+  position: absolute;
+  bottom: 0px;
+ height:100rpx;
+  width:100%;
+  color:#313131;
+  z-index:10000;
+  background:#fff;
+  border-top: 1px solid #dddddd;
+}
+.course-block{
+  margin-top:20rpx;
+}
+.content scroll-view{
+  padding-bottom: 50px;
+}
+.course-basket-all{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  background:#474747;
+  align-items: center;
+}
+.course-basket-img{
+  border: 1px solid #FF8200;
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.course-basket-img image{
+  width: 60%;
+  height: 60%;
+}
+.course-backet-text{
+  margin-left:30rpx;
+  font-size:32rpx;
+  color:#fff;
+}
+.course-type-block{
+  border-bottom:solid 1rpx #fafafa;
+}
+.course-backet-text text{
+  color: #FF8200;
+}
+.course-backet-btn{
+  height: 100%;
+  line-height: 100%;
+  width: 100px;
+  background: #2B95EF;
+  color:#fff;
+  /* background:linear-gradient(90deg, rgba(255, 184, 0, 1), rgba(255, 130, 0, 1)); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+.hide-course{
+  position:fixed;
+  width:100%;
+  left:0;
+  top:0;
+  bottom:100rpx;
+  overflow:hidden;
+  background:rgba(0,0,0,.4);
+  z-index:1000;
+}
+.hide-prop{
+  width:100%;
+  height:688rpx; 
+  position:absolute;
+  bottom:0px;
+  font-size:32rpx;
+  color:#666;
+  background:#fff;
+  transition:all .5s;
+  border-bottom:1px solid #dddddd;
+  z-index: 1001;
+  top: -688rpx;
+}
+.hide-head{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height:88rpx;
+  background:#ececec;
+  padding: 0 30px;
+}
+.throw{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 5px;
+}
+
+.hide-btn-right{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.hide-scroll{
+  height:600rpx;
+  width:100%;
+}
+.hide-item{
+  color:#333;
+  display:flex;
+  padding:24rpx 30rpx;
+  justify-content:space-between;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.hide-item-right{
+  width:50rpx;
+  height:100rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.hide-item-right image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.active{
+  background: #fafafa;
+  color:#2B95EF;
+  border-left: solid 6rpx #2B95EF;
+}

@@ -1,0 +1,176 @@
+<!-- 头部切换 -->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">所有</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav1">未点</view>
+  
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">未到</view>
+  <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">请假</view>
+</view>
+<!-- 所有学生 -->
+<swiper  current="{{currentTab}}"  duration="200">
+<swiper-item  catchtouchmove="stopTouchMove">
+     <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" >
+<view style='margin-top:100rpx;padding-bottom:20rpx;position:relative;z-index:1;margin-bottom:130rpx'>
+<view wx:for="{{stuList}}"  wx:key="{{item.stuID}}">
+  <view class="cell_box yidian"  catchtap='changeState' data-itemId="{{item.stuID}}" hover-class='hover_sty'>
+    <view class="photo_box">
+      <image src="{{item.address}}" mode='aspectFill'></image>
+    </view>
+    <view class="text_box">
+      <text class="mr_text text_key">{{item.name}}</text>
+      <text class="mr_text">{{item.number}}</text>
+      
+      <view style="display:flex;width:310rpx;overflow:hidden">
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 100}}" wx:key="">
+          <image src='../../image/dao.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 1}}" wx:key="">
+          <image src='../../image/weidao.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 2}}" wx:key="">
+          <image src='../../image/jia.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+      </view>
+    </view>
+    <view class="btn_box" id="{{index}}">
+      <view class="btn_item {{item.state==100?'active':''}}" catchtap="bg_change" data-state="100" data-itemId="{{item.stuID}}">
+      <image class="btn_item_img" src='../../image/gou.png' mode='aspectFill'></image>
+      </view>
+      <view class="btn_item {{item.state==1?'active':''}}" catchtap="bg_change" data-state="1" data-itemId="{{item.stuID}}">
+      <image class="btn_item_img" src='../../image/wrong.png' mode='aspectFill'></image>
+      </view>
+      <view class="btn_item {{item.state==2?'active':''}}" catchtap="bg_change" data-state="2" data-itemId="{{item.stuID}}">假</view>
+    </view>
+  </view>
+</view>
+
+
+</view>
+
+     </scroll-view>
+</swiper-item >
+
+<!-- 未点学生状态 -->
+<swiper-item catchtouchmove="stopTouchMove">
+     <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+<view style='margin-top:100rpx;padding-bottom:20rpx;margin-bottom:140rpx'>
+<view wx:for="{{weidianList}}" wx:key="{{item.stuID}}">
+  <view class="cell_box weidian" catchtap='changeState1' data-itemId="{{item.stuID}}"  hover-class='hover_sty'>
+    <view class="photo_box">
+      <image src="{{item.address}}" mode='aspectFill'></image>
+    </view>
+    <view class="text_box">
+      <text class="mr_text text_key">{{item.name}}</text>
+      <text class="mr_text">{{item.number}}</text>
+     <view style="display:flex;width:310rpx;overflow:hidden">
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 100}}" wx:key="">
+          <image src='../../image/dao.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 1}}" wx:key="">
+          <image src='../../image/weidao.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 2}}" wx:key="">
+          <image src='../../image/jia.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+      </view>
+    </view>
+    <view class="btn_box" id="{{index}}">
+      <view class="btn_item {{item.state==100?'active':''}}" catchtap="bg_change1" data-state="100" data-itemId="{{item.stuID}}">
+      <image class="btn_item_img" src='../../image/gou.png' mode='aspectFill'></image>
+      
+      </view>
+      <view class="btn_item {{item.state==1?'active':''}}" catchtap="bg_change1" data-state="1" data-itemId="{{item.stuID}}">
+      <image class="btn_item_img" src='../../image/wrong.png' mode='aspectFill'></image>
+      </view>
+      <view class="btn_item {{item.state==2?'active':''}}" catchtap="bg_change1" data-state="2" data-itemId="{{item.stuID}}">假</view>
+    </view>
+  </view>
+</view>
+
+</view>
+
+
+     </scroll-view>
+</swiper-item >
+
+
+<!-- 未到学生状态 -->
+<swiper-item catchtouchmove="stopTouchMove">
+     <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+<view style='margin-top:100rpx;padding-bottom:20rpx'>
+   
+<view wx:for="{{stuList}}" wx:if="{{item.state==1}}" wx:key="{{item.id}}">
+  <view class="cell_box" hover-class='hover_sty' style="opacity:{{item.isShow ? '1' : '0'}}">
+    <view class="photo_box">
+      <image src="{{item.isShow ? item.address:' '}}" mode='aspectFill'></image>
+    </view>
+
+    <view class="text_box">
+      <text class="mr_text text_key">{{item.name}}</text>
+      <text class="mr_text">{{item.number}}</text>
+      <view style="display:flex">
+        <view style="display:flex">
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 100}}" wx:key="">
+          <image src='../../image/dao.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 1}}" wx:key="">
+          <image src='../../image/weidao.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 2}}" wx:key="">
+          <image src='../../image/jia.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+      </view>
+      </view>
+    </view>
+    <view class="jl_box bg_2">
+      <image src="../../image/cuo.png" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>
+  
+</view>
+     </scroll-view>
+</swiper-item >
+<!-- 请假学生状态 -->
+<swiper-item catchtouchmove="stopTouchMove">
+     <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" >
+<view style='margin-top:100rpx;padding-bottom:20rpx'>
+   
+<view wx:for="{{stuList}}" wx:if="{{item.state==2}}" wx:key="{{item.id}}">
+  <view class="cell_box" hover-class='hover_sty' style="opacity:{{item.isShow ? '1' : '0'}}">
+    <view class="photo_box">
+      <image src="{{item.isShow ? item.address:' '}}" mode='aspectFill'></image>
+    </view>
+
+    <view class="text_box">
+      <text class="mr_text text_key">{{item.name}}</text>
+      <text class="mr_text">{{item.number}}</text>
+      <view style="display:flex">
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 100}}" wx:key="">
+          <image src='../../image/dao.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 1}}" wx:key="">
+          <image src='../../image/weidao.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+        <view class="mr_text" wx:for="{{item.rec}}" wx:if="{{item == 2}}" wx:key="">
+          <image src='../../image/jia.png' style="width:32rpx;height:32rpx"></image>
+        </view>
+      </view>
+    </view>
+    <view class="jl_box bg_1">
+      假
+    </view>
+  </view>
+</view>
+
+</view>
+     </scroll-view>
+</swiper-item >
+
+</swiper>
+
+
+<view class="btn_area" bindtap="submit">
+<button class="tj_sty">保存</button>
+</view>
+

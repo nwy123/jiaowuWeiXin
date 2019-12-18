@@ -1,0 +1,68 @@
+<!--pages/course/course.wxml-->
+<view class='course'>
+	
+	<view class="content">
+			 <scroll-view  style="height: 100%;"  scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true"  class="content-scroll" >
+        <view class='course-type-block' wx:for="{{course_data}}" wx:for-item="cell"  wx:key >
+          <view class='type-item' >
+            <view class='type-item-a'>
+              <view class='course-name'><text>{{cell.course_name}}</text><text style='margin-left:20rpx;'>{{cell.classAlias}}</text></view>
+              <view class='course-time'><text>任课教师：{{cell.teacherName}}</text></view>
+              <view >
+                  <view class='course-massage'><text>{{cell.course_xf}}学分</text></view>
+                  <view class='course-massage'><text>{{cell.course_xs}}</text></view>
+                  <view class='course-massage'><text>{{cell.course_time}}</text></view>
+              </view>
+                  
+              <view class='course-people'><text>人数：{{cell.course_people}}/{{cell.course_allpeople}}</text></view>
+            </view>
+            <view class='course-add' bindtap='add_course' id="{{index}}" >
+              <!-- <image src='{{cell.state==0?"../../images/add.png":"../../images/sub1.png"}}'></image> -->           <image src='../../images/add.png' wx:if="{{cell.state==0}}"></image>
+              <image src='../../images/sub1.png' wx:if="{{cell.state==1}}"></image>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+	</view>
+</view>
+<!-- 选课栏 -->
+<view class='course-basket'>
+  <view class='course-basket-all'>
+    <view class='course-basket-img' bindtap='open_hide' >
+      <image src='../../images/book.png'></image>
+    </view>
+    <view class='course-backet-text'>已选择：<text>{{course_num}}门课程</text></view>
+    <view class="course-backet-btn" bindtap='queren'><text>确认</text></view>
+  </view>
+  <!-- 隐藏层课程 -->
+  <view class='hide-course' style='display:{{display}}' bindtap='close_hide'></view>
+  <view>
+     <view class='hide-prop' style='z-index:1001' style='display:{{display}}'>
+      <view class='hide-head'>
+        <view>已选课程</view>
+        <view class='hide-btn-right' bindtap='clear_course'>
+          <image src='../../images/clear.png' class='throw'></image>
+          <view >清除</view>
+        </view>
+      </view>
+    <scroll-view class='hide-scroll'>
+      <view class='hide-item' wx:for="{{choose_course_data}}" wx:key>
+        <view class='hide-item-left' >
+          <view>{{item.choose_name}}</view>
+          <view>
+            <view class="course-massage">{{item.classAlias}}</view>
+            <view class="course-massage">{{item.choose_time}}</view>
+          </view>
+          
+        </view>
+        <view class='hide-item-right' bindtap='sub_course' id='{{index}}'>
+          <image src='../../images/sub.png'></image>
+        </view>
+      </view>
+    </scroll-view>
+    </view>
+    
+  </view> 
+
+      
+</view>

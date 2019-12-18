@@ -1,0 +1,25 @@
+/* pages/main2/main2.wxss */
+@import "../main1/main1.wxss";
+.main2_navigator_box{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.main2_navigatoritem_box{
+  width:47%;
+  border-radius:10rpx;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.main2_bg1{
+  background: #8748f3;
+  height:250rpx;
+}
+.main2_bg2{
+  background: #5fcc55;
+  height:250rpx;
+}

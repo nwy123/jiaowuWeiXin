@@ -1,0 +1,55 @@
+<view class="head_box">
+	<image src='../../image/school1.jpg' mode="aspectFill"></image>
+	<view class="school_name">
+		<view class="school_name_imgbox">
+			<view class="school_logobox">
+				<image src="../../image/logo1.jpg" mode='aspectFill'></image>
+			</view>
+			<view class="school_textbox">			
+				<text class="person_text font_28">教务微信</text>
+			</view>
+		      <view class="jiebang_btn" bindtap='jiebang'>
+		        <view class="jiebang_text">解绑</view>
+		        <view class="jiebang_img">
+		          <image src='../../image/iro.png' mode='aspectFill'></image>
+		        </view>        
+		      </view>
+		</view>
+	</view>
+	<view class="head_box_title">  
+		<text class="mr_rt">{{name}}</text>
+		<text class="mr_rt">{{number}}</text>
+	</view>
+</view>
+<view class="main_box">
+	<view class="other_box">
+		<navigator class="dm_box bg_1" url='../classroom/pages/main/main' hover-start-time='100' >
+			<view class="img_box">
+			<image src='../../image/room.png' mode='aspectFill'></image>
+			</view>
+			<view class="img_text">智慧教室</view>
+		</navigator>
+		<navigator class="xk_box bg_2" url='../attence/pages/index/index' hover-start-time='100'>
+			<view class="img_box">
+				<image src='../../image/er.png' mode='aspectFill'></image>
+			</view>
+			<view class="img_text">学生考勤</view>
+		</navigator>
+	</view>
+	<view class="other_box">
+		<navigator class="dm_box bg_3" url='../selectcourse/pages/index/index' hover-start-time='100' style='margin-left:3%'>
+			<view class="img_box">
+			<image src='../../image/book.png' mode='aspectFill'></image>
+			</view>
+			<view class="img_text">学生选课</view>
+		</navigator>
+		<navigator class="xk_box bg_4" hover-start-time='100' url='../index/index' style='margin-left:3%'>
+			<view class="img_box">
+			<image src='../../image/dm1.png' mode='aspectFill'></image>
+			</view>
+
+			<view class="img_text">教师点名</view>
+		</navigator>
+	</view>
+
+</view>

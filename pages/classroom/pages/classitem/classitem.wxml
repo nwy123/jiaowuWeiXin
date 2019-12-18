@@ -1,0 +1,219 @@
+<!--pages/classroom/pages/classitem/classitem.wxml-->
+
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">上课教室</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">自习教室</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">空闲教室</view>
+</view>
+
+
+<swiper current="{{currentTab}}"  duration="200">
+  <swiper-item catchtouchmove="stopTouchMove">
+         <scroll-view scroll-y="{{true}}" style="height:100%" >
+           <view class="item_box">
+            <view class="zwxx">
+             <!--  <image src='../../images/bg.png'></image> -->
+        <view>暂无该状态教室信息</view>
+            </view>
+        <view wx:for="{{list}}" wx:key="{{item.id}}" style='display:flex;flex-direction: column;justify-content: center;width:95%;margin-bottom:20rpx;z-index:100' wx:if="{{item.course!=null}}"  >
+          
+          <view  class="kind-list-item-hd " >
+                <view class="kind-list-text">{{item.course}}</view>
+                <view class="room_box">
+                  {{item.classNo}}
+                </view>
+                      
+                <image id="{{item.id}}" class="kind-list-img" src="../../images/fg.png"  bindtap="isToggle"></image>
+            </view>
+
+                <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+                    <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+                      <view class="navigator_text">
+                        <text>开关门：</text>
+                        <view class="btn_box">
+                          
+                          <view class="btn_box">
+                          
+                          <view class="btn_item" data-command="openRoom" data-roomid="{{item.id}}" hover-class='bg_blue' bindtap='optration'>开门</view>
+                          <view class="btn_item" data-command="closeRoom" data-roomid="{{item.id}}" hover-class='bg_blue' bindtap='optration'>关门</view>
+                        </view>
+                        </view>
+                      </view>
+                      <view class="navigator_text">
+
+
+                        <text>开关设备：</text>
+                        <view class="btn_box">
+                          
+                         <view class="btn_box">
+                          
+                          <view class="btn_item" data-command="openDevice" data-roomid="{{item.id}}" hover-class='bg_blue' bindtap='optration'>开</view>
+                          <view class="btn_item" data-command="closeDevice" data-roomid="{{item.id}}" hover-class='bg_blue' bindtap='optration'>关</view>
+                        </view>
+                        </view>
+                        
+                      </view>
+                      <view class="navigator_text mr_bt">
+                        <text>是否设为自习室：</text>
+                        <view class="btn_box">
+                          
+                         <view class="btn_box">
+                          
+                          <view class="btn_item" data-command="setStudy" data-roomid="{{item.id}}" bindtap='optration' id="{{item.id}}" hover-class='bg_blue'>是</view>
+                          <view class="btn_item" hover-class='bg_blue' data-command="cancelStudy" data-roomid="{{item.id}}" bindtap='optration'>否</view>
+                        </view>
+                        </view>
+                        
+                      </view>
+                    
+                      
+                    </view>
+                  </view>
+          
+        </view>
+      <view>
+
+      </view>
+
+           </view>
+
+
+         </scroll-view>
+  </swiper-item >
+
+<swiper-item catchtouchmove="stopTouchMove">
+     <scroll-view scroll-y="{{true}}" style="height:100%">
+      <view class="item_box">
+        <view class="zwxx">
+          <!-- <image src='../../images/bg.png'></image> -->
+        <view>暂无该状态教室信息</view>
+        </view>
+           
+           <view wx:for="{{list}}" wx:key="{{item.id}}" style='display:flex;flex-direction: column;justify-content: center;width:95%;margin-bottom:20rpx;z-index:100' wx:if="{{item.course==null&&item.runStat==1}}">
+        
+              <view  class="kind-list-item-hd " >
+                  <view class="kind-list-text">{{item.classNo}}</view>
+                  <image id="{{item.id}}" class="kind-list-img" src="../../images/fg.png"  bindtap="isToggle"></image>
+              </view>
+
+                <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+                  <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+                    <view class="navigator_text">
+                      <text>开关门：</text>
+                      <view class="btn_box">
+                        
+                        <view class="btn_box">
+                        
+                        <view class="btn_item" hover-class='bg_blue' data-command="openRoom" data-roomid="{{item.id}}" bindtap='optration'>开门</view>
+                        <view class="btn_item" hover-class='bg_blue' data-command="closeRoom" data-roomid="{{item.id}}" bindtap='optration'>关门</view>
+                      </view>
+                      </view>
+                    </view>
+                    <view class="navigator_text">
+
+
+                      <text>开关设备：</text>
+                      <view class="btn_box">
+                        
+                       <view class="btn_box">
+                        
+                        <view class="btn_item" hover-class='bg_blue' data-command="openDevice" data-roomid="{{item.id}}" bindtap='optration'>开</view>
+                        <view class="btn_item" hover-class='bg_blue' data-command="closeDevice" data-roomid="{{item.id}}" bindtap='optration'>关</view>
+                      </view>
+                      </view>
+                      
+                    </view>
+                    <view class="navigator_text mr_bt">
+                      <text>是否设为自习室：</text>
+                      <view class="btn_box">
+                        
+                       <view class="btn_box">
+                        
+                        <view class="btn_item" hover-class='bg_blue' data-command="setStudy" data-roomid="{{item.id}}" bindtap='optration'>是</view>
+                        <view class="btn_item" hover-class='bg_blue' data-command="cancelStudy" data-roomid="{{item.id}}" bindtap='optration'>否</view>
+                      </view>
+                      </view>
+                      
+                    </view>
+                  
+                    
+                  </view>
+                </view>
+                </view>
+
+           </view>
+
+     </scroll-view>
+</swiper-item >
+
+
+<swiper-item catchtouchmove="stopTouchMove">
+     <scroll-view scroll-y="{{true}}" style="height:100%">
+ <view class="item_box">
+      <view class="zwxx">
+        <!-- <image src='../../images/bg.png'></image> -->
+        <view>暂无该状态教室信息</view>
+      </view>
+     <view wx:for="{{list}}" wx:key="{{item.id}}" style='display:flex;flex-direction: column;justify-content: center;width:95%;margin-bottom:20rpx;z-index:100' wx:if="{{item.course==null&&item.runStat==0}}">
+  
+<view  class="kind-list-item-hd " >
+            <view class="kind-list-text">{{item.classNo}}</view>
+            
+            <image id="{{item.id}}" class="kind-list-img" src="../../images/fg.png"  bindtap="isToggle"></image>
+          </view>
+
+          <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+            <view class="navigator_text">
+
+              <text>开关门：</text>
+              <view class="btn_box">
+                
+                <view class="btn_box">
+                
+                <view class="btn_item" hover-class='bg_blue' data-command="openRoom" data-roomid="{{item.id}}" bindtap='optration'>开门</view>
+                <view class="btn_item" hover-class='bg_blue' data-command="closeRoom" data-roomid="{{item.id}}" bindtap='optration'>关门</view>
+              </view>
+              </view>
+            </view>
+            <view class="navigator_text">
+
+
+              <text>开关设备：</text>
+              <view class="btn_box">
+                
+               <view class="btn_box">
+                
+                <view class="btn_item" hover-class='bg_blue' data-command="openDevice" data-roomid="{{item.id}}" bindtap='optration'>开</view>
+                <view class="btn_item" hover-class='bg_blue' data-command="closeDevice" data-roomid="{{item.id}}" bindtap='optration'>关</view>
+              </view>
+              </view>
+              
+            </view>
+            <view class="navigator_text mr_bt">
+
+
+              <text>是否设为自习室：</text>
+              <view class="btn_box">
+                
+               <view class="btn_box">
+                
+                <view class="btn_item" bindtap='optration' id="{{item.id}}" hover-class='bg_blue' data-command="setStudy" data-roomid="{{item.id}}">是</view>
+                <view class="btn_item" hover-class='bg_blue' data-command="cancelStudy" data-roomid="{{item.id}}" bindtap='optration'>否</view>
+              </view>
+              </view>
+              
+            </view>
+            
+              
+            </view>
+          </view>
+        
+</view>
+     </view>
+     </scroll-view>
+</swiper-item >
+
+</swiper>
+
+

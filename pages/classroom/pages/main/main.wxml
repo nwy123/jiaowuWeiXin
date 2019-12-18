@@ -1,0 +1,39 @@
+<view class="main_box">
+  <view class="main_head_box">
+    <image  class="main_box_img" src="../../images/jiaoshi.jpg" mode="aspectFill"></image>
+  </view>
+<view class="kind-list">
+      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+        <view class="kind-list-item">
+          <view id="{{item.id}}" class="kind-list-item-hd" >
+            <view class="kind-list-text">{{item.desprition}}</view>
+          </view>
+          <view class="kind-list-item-bd kind-list-item-bd-show">
+            <view class="navigator-box navigator-box-show">
+              <block >
+                <view class="navigator">
+                  <view class="navigator_img">
+                    
+                    <image src="../../images/lou.png" mode="aspectFill"></image>
+                  </view>
+                  <navigator class="navigator-text" url="../classitem/classitem?id={{item.id}}&title={{item.desprition}}" hover-stay-time='100' hover-class="none">教室运行</navigator>
+
+                  <view class="navigator-arrow" ></view>
+                </view>
+                
+                <view class="navigator">
+                  <view class="navigator_img">
+                    
+                    <image src="../../images/gg.png" mode="aspectFill"></image>
+                  </view>
+                  <navigator class="navigator-text" url="../tzgg/tzgg?id={{item.id}}" hover-stay-time='100' hover-class='none'>通知公告</navigator>
+                  <view class="navigator-arrow" ></view>
+                </view>
+              </block>
+            </view>
+          </view>
+
+        </view>
+      </block>
+    </view>
+  </view>

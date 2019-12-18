@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/enter/enter",
+    "pages/login/login",
+    "pages/error/error",
+    "pages/main/main",
+    "pages/main1/main1",
+    "pages/main2/main2",
+    "pages/index/index",
+    "pages/selectWay/selectWay",
+    "pages/manual/manual",
+    "pages/number/number",
+    "pages/record/record",
+    "pages/classroom/pages/main/main",
+    "pages/classroom/pages/classitem/classitem",
+    "pages/classroom/pages/tzgg/tzgg",
+    "pages/attence/pages/index/index",
+    "pages/selectcourse/pages/index/index",
+    "pages/selectcourse/pages/course/course",
+    "pages/selectcourse/pages/course1/course1"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00aff0",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

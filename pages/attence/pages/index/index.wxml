@@ -1,0 +1,26 @@
+<!--pages/selectWay/selectWay.wxml-->
+
+<view class="container">
+	<view class="item-box box-add">
+		<view class="select-text">请选择签到方式</view>
+		<view class="select-ball">
+            <view class='select-cell' url="../manual/manual" hover-stay-time="100" bindtap='scanCode'>
+            	<image src="../../images/er.png" class="select-icon" mode='aspectFill'></image>
+            	<text class="duc1">二维码签到</text>
+            	<view class="duc2">扫描屏幕二维码</view>
+            </view>
+             <view class='select-cell' hover-stay-time="100" bindtap='inputNumber'>	
+             	<image src="../../images/number.png" class="select-icon" mode='aspectFill'></image>
+            	<text class="duc1">口令点名</text>
+            	<text class="duc2">输入给出的口令签到</text>
+             </view>
+        </view>
+	</view>
+</view>
+<!-- 弹出框 -->
+<modal hidden="{{hidden}}" title="请输入口令码" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{nocancel}}">
+      <view style='padding:20rpx 20rpx;margin-top:20rpx'>
+        <input text="num" placeholder='输入口令码' class='input_money' name="number" bindinput='getnumber'></input>
+      </view>
+   
+</modal>

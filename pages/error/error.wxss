@@ -1,0 +1,33 @@
+/* pages/error/error.wxss */
+@import "../login/login.wxss";
+page{
+  background:#ebe7e8;
+}
+.error_img{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 250rpx;
+  padding-bottom: 100rpx;
+}
+.error_img image{
+  width: 130rpx;
+  height: 200rpx;
+}
+.error_text{
+  font-size:32rpx;
+  color:#a5a5a5;
+  margin-top: 40rpx;
+}
+.back_btn{
+  width:250rpx;
+  height:75rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+  border:solid 2rpx #00bcee;
+  color: #00bcee;
+}

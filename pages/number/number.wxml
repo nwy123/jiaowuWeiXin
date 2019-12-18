@@ -1,0 +1,19 @@
+<view class="container">
+	<view class="item-box">
+    <view class='class-number'>
+    <view class='font14'>计算机网络</view>
+    <button class="over-btn" bindtap="cancelTap">结束签到</button>
+    </view>
+    <view class="duc3">
+    	<image></image>
+      <text class="font14 col-1">在屏幕上生成签到口令</text>
+    </view>
+    <view class="number-box">
+        <view class="number-cell">{{number}}</view>	
+    </view>
+  </view>
+  	<view class="item-box">
+    <navigator class="fin-number" url='../manual/manual?tcId={{tcId}}&operation=new' hover-stay-time="50" hover-class='none'>已点人数：<text class="fin-num">{{finish_number}}</text>
+    </navigator>
+    </view>
+</view>

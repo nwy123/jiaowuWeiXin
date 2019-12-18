@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="main_box">
+	<view class="main_head_box">
+    <image  class="main_box_img" src="../../image/4.jpg" mode="aspectFill"></image>
+  	</view>
+	<view class="kind-list">
+      <block wx:for-items="{{classList}}" wx:key="{{item.tcID}}">
+        <view class="kind-list-item">
+          <view id="{{item.id}}" class="kind-list-item-hd" >
+            <view class="kind-list-text">{{item.courseName}}</view>
+          </view>
+          <view class="kind-list-item-bd kind-list-item-bd-show">
+            <view class="navigator-box navigator-box-show">
+              <block >
+                <view class="navigator">
+                  <navigator class="navigator-text" url="../selectWay/selectWay?tcId={{item.tcID}}" hover-stay-time='100' hover-class='none'>
+						<view style="display:flex;align-items:center">
+							<view>班级：</view>
+							<view style="margin-left:20rpx;width:240rpx">{{item.className}}</view>
+						</view>						
+                  	</navigator>         
+                  <view class="navigator-arrow" hover-class='none'></view>
+                </view>
+                <view class="navigator">              
+                  <navigator class="navigator-text" url="../record/record?tcId={{item.tcID}}" hover-stay-time='100' hover-class='none'>
+                    <view style="display:flex">
+                      <view>签到记录</view>  
+                    </view>
+                    </navigator>
+                    
+                  <view class="navigator-arrow" hover-class='none'></view>
+                </view> 
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+</view>

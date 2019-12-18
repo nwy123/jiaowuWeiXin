@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="error_img">
+    
+     <view>
+     <image src='../../image/error.png' mode="aspectFill"></image>
+     </view>
+     <view class="error_text" >{{msg}}</view>
+  </view>
+  <navigator class="back_btn" url='../login/login'>返回首页</navigator>
+</view>

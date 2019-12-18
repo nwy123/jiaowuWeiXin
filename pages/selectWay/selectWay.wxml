@@ -1,0 +1,24 @@
+<!--pages/selectWay/selectWay.wxml-->
+
+<view class="container">
+	<view class="item-box box-add">
+        <view class="jl-nav">
+          <navigator class='jl-btn' url='../record/record?tcId={{tcId}}' hover-stay-time="100" hover-class='none'>
+        		签到记录
+            </navigator>
+        </view>
+		<view class="select-text">请选择发起签到的方式</view>
+		<view class="select-ball">
+            <navigator class='select-cell' url="../manual/manual?tcId={{tcId}}&operation=new" hover-stay-time="100" hover-class='none'> 
+            	<image src="../../image/finger1.png" class="select-icon" mode='aspectFill'></image>
+            	<text class="duc1">手工点名</text>
+            	<view class="duc2">手动选择进行签到</view>
+            </navigator>
+             <navigator class='select-cell' hover-stay-time="100" url="../number/number?tcId={{tcId}}"  hover-class='none'>
+             	<image src="../../image/number.png" class="select-icon" mode='aspectFill'></image>
+            	<text class="duc1">口令点名</text>
+            	<text class="duc2">输入给出的数字签到</text>
+             </navigator >
+        </view>
+	</view>
+</view>

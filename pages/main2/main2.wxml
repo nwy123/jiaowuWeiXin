@@ -1,0 +1,55 @@
+<!-- 教师展示页面 -->
+
+<view class="head_box">
+	<image src='../../image/school1.jpg' mode="aspectFill"></image>
+	<view class="school_name">
+		<view class="school_name_imgbox">
+			<view class="school_logobox">
+				<image src="../../image/logo1.jpg" mode='aspectFill'></image>
+			</view>
+			<view class="school_textbox">
+				
+				<text class="person_text font_28">教务微信</text>
+			</view>
+      <view class="jiebang_btn" bindtap='jiebang'>
+        <view class="jiebang_text">解绑</view>
+        <view class="jiebang_img">
+          <image src='../../image/iro.png' mode='aspectFill'></image>
+        </view>
+        
+      </view>
+
+		</view>
+	</view>
+	<view class="head_box_title">
+		<text class="mr_rt">{{name}}</text>
+		<text class="mr_rt">{{number}}</text>
+	</view>
+
+                                    
+</view>
+
+<view class="main_box">
+	<view class="main2_navigator_box">
+	<navigator class="main2_navigatoritem_box main2_bg1" url='../classroom/pages/main/main' hover-start-time='100'>
+
+			<view class="img_box">
+				<image src='../../image/room.png' mode='aspectFill'></image>
+
+			</view>
+
+			<view class="img_text">智慧教室</view>
+		</navigator>
+
+		<navigator class="main2_navigatoritem_box main2_bg2" url='../index/index' hover-start-time='100'>
+
+			<view class="img_box">
+				<image src='../../image/dm1.png' mode='aspectFill'></image>
+
+			</view>
+
+			<view class="img_text">教师点名</view>
+		</navigator>	
+
+	</view>
+</view>

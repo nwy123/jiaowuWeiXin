@@ -1,0 +1,28 @@
+<view class="container">
+	<view class="login_logo">
+		<view class="login_logo_imgbox">
+			<image src='../../image/login.png'></image>
+		</view>
+		<view class="login_logo_text">教务系统平台</view>
+	</view>
+		<form bindsubmit='formSubmit' style="width:90%">
+	<view class="login_btn_area" style="width:100%">		
+		<view class="btn_box">
+			<input class="btn_input" placeholder="请输入学号/工号" type='number'  name="username" value=''></input>
+				<view class="btn_img">
+					<image src="../../image/name.png" mode="aspectFit"></image>
+				</view>
+		</view>
+		<view class="btn_box">
+			<input class="btn_input" placeholder="请输入密码" type='password'  name="password" value=''></input>
+				<view class="btn_img">
+					<image src="../../image/pwd.png" mode="aspectFit" style="width:60rpx;height:60rpx"></image>
+				</view>
+		</view>	
+      <button class="login_btn_enter"  formType="submit">登录</button>
+	</view>
+	</form>
+	<view class="login_bottom-box">
+		<image src='../../image/bg.png' class='bottom-img' mode="aspectFit"></image>
+	</view> 
+</view>

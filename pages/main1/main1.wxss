@@ -1,0 +1,199 @@
+/* pages/main1/学生页面.wxss */
+
+page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jiebang_btn{
+  width:160rpx;
+  height:100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+  margin-left: auto;
+  margin-right: 0;
+}
+.head_box{
+  width:90%;
+  height:365rpx;
+  margin-top:20rpx;
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.head_box image{
+  width: 100%;
+  height:100%;
+}
+.head_box_title{
+  width:100%;
+  height:105rpx;
+  position: absolute;
+  left:0;
+  bottom:0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 32rpx;
+  color: #fff;
+  z-index: 1;
+  
+}
+.mr_rt{
+  margin-right: 30rpx;
+}
+.school_name{
+  width:100%;
+  height:auto;
+  position: absolute;
+  left: 0;
+  top:10rpx;
+  padding:10rpx;
+}
+.school_name_imgbox{
+  width:100%;
+  height:100rpx;
+  display: flex;
+  font-size:28rpx;
+  align-items: center;
+}
+.school_logobox{
+  width:75rpx;
+  height:75rpx;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  
+}
+.school_logobox image{
+  width:75rpx;
+  height:75rpx;
+  border-radius: 50%;
+}
+
+.school_textbox{
+  display: flex;
+  flex-direction: column;
+}
+.person_text{
+  font-size: 36rpx;
+  color:#fff;
+}
+.font_28{
+  font-size: 36rpx;
+}
+.jiebang_img{
+  width:40rpx;
+  height:40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.jiebang_img image{
+  width:40rpx;
+  height:40rpx;
+}
+.jiebang_text{
+  color:#fff;
+}
+.main_box{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-top: 60rpx;
+  
+}
+.other_box{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.bg_1{
+  background: #8748f3;
+  height:350rpx;
+}
+.bg_2{
+  background:#f3844c;
+  height:250rpx;
+  margin-top: 30rpx;
+}
+.bg_3{
+  background: #5fccf5;
+  height: 250rpx;
+}
+.bg_4{
+  background: #5fcc55;
+  height:350rpx;
+  margin-top: 30rpx;
+}
+.dm_box{
+  width: 97%;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.xk_box{
+  width: 97%;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_box{
+  width:80rpx;
+  height:80rpx;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.img_box image{
+  width: 100%;
+  height:100%;
+}
+
+.img_text{
+  color:#fff;
+  font-size: 34rpx;
+  margin-top:30rpx;
+}
+
+.main1_bg1{
+  background: #8748f3;
+  height:200rpx;
+}
+.main1_bg2{
+  background: #f3844c;
+  height:200rpx;
+  margin-top: 30rpx;
+}
+.main1_bg3{
+  background: #5fcc55;
+  height:430rpx;
+}
+.main2_imgbox{
+  width:60rpx;
+  height:60rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.main2_imgbox image{
+  width:100%;
+  height:100%;
+}
